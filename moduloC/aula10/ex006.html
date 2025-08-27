@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+    <style>
+      #area {
+        font: normal 25pt Arial;
+        background-color: #00ce2d;      
+        color: rgb(0, 0, 0);
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="area">brat</div>
+    <script>
+      var ar = document.getElementById("area")
+      ar.addEventListener('click', clicar)
+      ar.addEventListener('mouseenter', entrar)
+
+      function entrar() {
+        ar.style.background = "#00ce67"
+        ar.innerText = "clique para ver algo bacana"
+        ar.style.fontSize = '12pt'
+      }
+
+      function clicar() {
+        ar.innerText = "chromakopia"
+        ar.style.fontSize = '20pt'
+        ar.style.background = "#01823E"
+      }
+    </script>
+  </body>
+</html>

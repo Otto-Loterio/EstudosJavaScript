@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="numero1" id="n1"> +
+    <input type="number" name="numero2 " id="n2">
+    <input type="button" value="somar" id="soma" onclick="somar()">
+    <h1 id="resul">O resultado é:</h1>
+
+    <script>
+    //          **Meu Jeito!**
+
+    // var somar = document.getElementById('soma')
+    // var num1 = document.getElementById('n1')
+    // var num2 = document.getElementById('n2')
+    // var res = document.getElementById('resul')
+
+    // somar.addEventListener('click', clicar)
+
+    // function clicar(){
+    //    adicao = Number(num1.value) + Number(num2.value)
+    //    res.innerText = `Resultado: ${adicao}`
+    // }
+
+    //          **Jeito Gustavo Guanabara!** 
+
+        function somar(){
+            var tn1 = document.getElementById('n1')
+            var tn2 = document.querySelector('input#n2')
+            var res = document.getElementById('resul')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `O resultado é: ${s}`
+        }
+    </script>
+</body>
+</html>
